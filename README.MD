@@ -137,7 +137,7 @@ Example:
 
 The application queries Amazon CloudWatch Logs Insights and presents matching error-related entries as an operational log summary.
 
-![Operational Log Monitoring](images/operational-log-monitoring.png)
+![Operational Log Monitoring](images/operational-logs-monitoring.png)
 ---
 
 # Enterprise Value
