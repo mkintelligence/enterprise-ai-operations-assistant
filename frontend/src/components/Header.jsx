@@ -3,13 +3,20 @@ export default function Header() {
     <header className="topbar">
       <div>
         <p className="brand">CloudCorp Technologies</p>
+
         <h1>Enterprise AI Operations Assistant</h1>
       </div>
 
       <div className="topbar-actions">
-        <span className="pill">AWS Bedrock</span>
-        <span className="pill success">RAG Enabled</span>
-        <span className="pill success">CloudWatch Enabled</span>
+        <span className="pill">📚 Bedrock RAG</span>
+
+        <span className="pill success">
+          ☁ CloudWatch Logs
+        </span>
+
+        <span className="pill success">
+          📊 Snowflake Analytics
+        </span>
       </div>
     </header>
   );

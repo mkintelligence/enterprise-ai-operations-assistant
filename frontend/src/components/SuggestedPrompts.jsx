@@ -1,17 +1,22 @@
 const prompts = [
-  'What is the P1 incident process?',
-  'How do I troubleshoot a 503 Service Unavailable error?',
-  'Show recent Lambda errors',
-  'What are the rollback requirements?'
+  '📚 What is the P1 incident process?',
+  '☁ Show recent Lambda errors',
+  '📊 Which applications have the most incidents?',
+  '📊 What are the top incident root causes?'
 ];
 
-export default function SuggestedPrompts({ onPromptClick, disabled }) {
+export default function SuggestedPrompts({
+  onPromptClick,
+  disabled
+}) {
   return (
     <section className="prompt-panel">
       <h2>How can I help today?</h2>
+
       <p>
-        Ask questions grounded in CloudCorp enterprise documents and recent AWS
-        operational logs.
+        Ask questions across enterprise documentation,
+        AWS operational logs, and Snowflake incident
+        analytics.
       </p>
 
       <div className="prompt-grid">
@@ -19,7 +24,11 @@ export default function SuggestedPrompts({ onPromptClick, disabled }) {
           <button
             key={prompt}
             className="prompt-card"
-            onClick={() => onPromptClick(prompt)}
+            onClick={() =>
+              onPromptClick(
+                prompt.replace(/^[^\w]+\s*/, "")
+              )
+            }
             disabled={disabled}
           >
             {prompt}

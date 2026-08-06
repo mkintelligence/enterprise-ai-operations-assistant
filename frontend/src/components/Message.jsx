@@ -3,23 +3,45 @@ import CitationCard from './CitationCard.jsx';
 
 export default function Message({ message }) {
   const isUser = message.role === 'user';
+  const hasCitations =
+    !isUser &&
+    Array.isArray(message.citations) &&
+    message.citations.length > 0;
 
   return (
-    <article className={`message ${isUser ? 'message-user' : 'message-ai'}`}>
-      <div className={`avatar ${isUser ? 'avatar-user' : 'avatar-ai'}`}>
+    <article
+      className={`message ${
+        isUser ? 'message-user' : 'message-ai'
+      }`}
+    >
+      <div
+        className={`avatar ${
+          isUser ? 'avatar-user' : 'avatar-ai'
+        }`}
+      >
         {isUser ? 'You' : 'AI'}
       </div>
 
       <div className="message-content">
-        <div className={`bubble ${isUser ? 'bubble-user' : 'bubble-ai'}`}>
+        <div
+          className={`bubble ${
+            isUser ? 'bubble-user' : 'bubble-ai'
+          }`}
+        >
           {isUser ? (
             <p>{message.content}</p>
           ) : (
-            <ReactMarkdown>{message.content}</ReactMarkdown>
+            <ReactMarkdown>
+              {message.content}
+            </ReactMarkdown>
           )}
         </div>
 
-        {!isUser && <CitationCard citations={message.citations} />}
+        {hasCitations && (
+          <CitationCard
+            citations={message.citations}
+          />
+        )}
       </div>
     </article>
   );

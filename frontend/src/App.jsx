@@ -9,7 +9,7 @@ const starterMessages = [
     id: 'welcome',
     role: 'assistant',
     content:
-      'Hello! I am your Enterprise AI Operations Assistant. Ask me about incidents, API errors, deployments, runbooks, enterprise documentation, or recent AWS operational logs.',
+      'Welcome to the Enterprise AI Operations Assistant. Ask questions about enterprise documentation, AWS operational logs, or Snowflake incident analytics. I will automatically route your request to the appropriate enterprise data source.',
     citations: []
   }
 ];
@@ -65,13 +65,14 @@ export default function App() {
           <p className="eyebrow">Enterprise GenAI Support</p>
 
           <h2>
-            Enterprise AI assistant for incident response, deployment standards,
-            API troubleshooting, and cloud operations.
+            Enterprise AI assistant for operational knowledge,
+            AWS troubleshooting, and incident analytics.
           </h2>
 
           <p>
-            Ask natural language questions and receive grounded answers from
-            CloudCorp operational documents and recent AWS operational logs.
+            Ask natural-language questions across enterprise documentation,
+            AWS operational logs, and Snowflake incident data. Receive grounded
+	    answers, operational analysis, and actionable insights.
           </p>
         </div>
 
@@ -80,42 +81,42 @@ export default function App() {
 
           <div className="arch-item">
             <span>⚛️</span>
-            <span>React Frontend</span>
+            <span>Amazon Bedrock Knowledge Base</span>
           </div>
 
           <div className="arch-item">
             <span>🌐</span>
-            <span>Amazon API Gateway</span>
+            <span>Enterprise AI Orchestrator</span>
           </div>
 
           <div className="arch-item">
             <span>⚡</span>
-            <span>AWS Lambda</span>
+            <span>Amazon CloudWatch Logs Insights</span>
           </div>
 
           <div className="arch-item">
             <span>🧠</span>
-            <span>Amazon Bedrock</span>
+            <span>Snowflake Incident Analytics</span>
           </div>
 
           <div className="arch-item">
             <span>📚</span>
-            <span>Knowledge Base</span>
+            <span>AWS Workload Identity Federation</span>
           </div>
 
           <div className="arch-item">
             <span>📊</span>
-            <span>Amazon CloudWatch Logs</span>
+            <span>Amazon API Gateway</span>
           </div>
 
           <div className="arch-item">
             <span>🗂️</span>
-            <span>S3 Vector Store</span>
+            <span>AWS Lambda</span>
           </div>
 
           <div className="arch-item">
             <span>🤖</span>
-            <span>Nova Lite LLM</span>
+            <span>Amazon Nova Lite</span>
           </div>
         </div>
       </section>
