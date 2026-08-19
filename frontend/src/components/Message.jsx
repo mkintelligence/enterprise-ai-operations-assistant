@@ -1,8 +1,11 @@
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+
 import CitationCard from './CitationCard.jsx';
 
 export default function Message({ message }) {
   const isUser = message.role === 'user';
+
   const hasCitations =
     !isUser &&
     Array.isArray(message.citations) &&
@@ -31,7 +34,9 @@ export default function Message({ message }) {
           {isUser ? (
             <p>{message.content}</p>
           ) : (
-            <ReactMarkdown>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+            >
               {message.content}
             </ReactMarkdown>
           )}
