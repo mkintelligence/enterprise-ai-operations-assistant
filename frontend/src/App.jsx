@@ -17,6 +17,7 @@ const starterMessages = [
 export default function App() {
   const [messages, setMessages] = useState(starterMessages);
   const [loading, setLoading] = useState(false);
+  const [sessionId] = useState(() => crypto.randomUUID());
 
   async function handleAsk(question) {
     const userMessage = {
@@ -26,11 +27,27 @@ export default function App() {
       citations: []
     };
 
+    const history = messages
+      .filter(
+        (message) =>
+          message.id !== 'welcome' &&
+          (message.role === 'user' || message.role === 'assistant')
+      )
+      .slice(-6)
+      .map((message) => ({
+        role: message.role,
+        content: message.content
+      }));
+
     setMessages((current) => [...current, userMessage]);
     setLoading(true);
 
     try {
-      const response = await askOperationsAssistant(question);
+      const response = await askOperationsAssistant(
+        question,
+        sessionId,
+        history
+      );
 
       const assistantMessage = {
         id: crypto.randomUUID(),
