@@ -10,11 +10,10 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
-    "vite": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-markdown": "latest",
-    "remark-gfm": "latest"
-  },
-  "devDependencies": {}
+    "remark-gfm": "^4.0.1",
+    "vite": "latest"
+  }
 }
