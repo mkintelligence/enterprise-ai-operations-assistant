@@ -270,12 +270,12 @@ body {
   width: 100%;
   border-collapse: collapse;
   margin: 16px 0 20px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .bubble th,
 .bubble td {
-  padding: 10px 14px;
+  padding: 10px 16px;
   text-align: left;
   vertical-align: top;
   border-bottom: 1px solid #dbe5ef;
@@ -285,6 +285,11 @@ body {
   color: #173b73;
   font-weight: 700;
   background: #f1f5f9;
+  white-space: nowrap;
+}
+
+.bubble td {
+  white-space: nowrap;
 }
 
 .bubble tbody tr:last-child td {
@@ -294,6 +299,7 @@ body {
 .bubble tbody tr:hover {
   background: #f8fafc;
 }
+
 .source-panel {
   margin-top: 14px;
   background: white;
