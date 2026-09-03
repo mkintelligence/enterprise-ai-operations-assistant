@@ -265,6 +265,35 @@ body {
   margin: 10px 0;
 }
 
+/* Markdown tables inside AI responses */
+.bubble table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 20px;
+  font-size: 15px;
+}
+
+.bubble th,
+.bubble td {
+  padding: 10px 14px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #dbe5ef;
+}
+
+.bubble th {
+  color: #173b73;
+  font-weight: 700;
+  background: #f1f5f9;
+}
+
+.bubble tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.bubble tbody tr:hover {
+  background: #f8fafc;
+}
 .source-panel {
   margin-top: 14px;
   background: white;
